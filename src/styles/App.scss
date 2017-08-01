@@ -1,1 +1,11 @@
-@import '_helloWorld';
+@import 'fonts';
+@import 'variables';
+@import 'headerComponent';
+
+html,body {
+  margin: 0;
+  background: $coreAlabaster;
+}
+p {
+  margin: 0;
+}
