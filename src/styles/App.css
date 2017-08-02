@@ -67,6 +67,42 @@
     font-family: "Roboto-Regular", sarif;
     font-size: 18px; }
 
+.balanceSheetComponent {
+  height: 100vh;
+  display: flex;
+  justify-content: center; }
+
+.balanceSheetWrapper {
+  width: 90%;
+  height: auto;
+  margin-top: 2em; }
+
+.balanceSheetHeaderContainer {
+  display: flex;
+  height: 3rem;
+  background: white;
+  font-family: "Roboto-Bold", sarif;
+  font-size: 12px;
+  color: #098B8C; }
+  .balanceSheetHeaderContainer .date {
+    display: flex;
+    align-items: center;
+    flex-basis: 15%;
+    margin-left: 1.5em; }
+  .balanceSheetHeaderContainer .company {
+    display: flex;
+    align-items: center;
+    flex-basis: 35%; }
+  .balanceSheetHeaderContainer .account {
+    display: flex;
+    align-items: center;
+    flex-basis: 35%; }
+  .balanceSheetHeaderContainer .total {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 15%; }
+
 html, body {
   margin: 0;
   background: #EFEDE8; }
