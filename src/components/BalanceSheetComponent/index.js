@@ -1,10 +1,16 @@
 import React from 'react';
-import BalanceSheetWrapper from '../BalanceSheetWrapper';
+import DateComponent from './DateComponent';
+import CompanyComponent from './CompanyComponent';
+import AccountComponent from './AccountComponent';
+import AmountComponent from './AmountComponent';
 
-const BalanceSheetComponent = () => {
+const BalanceSheetComponent = ({ date, ledger, amount, company}) => {
   return (
     <div className="balanceSheetComponent">
-      <BalanceSheetWrapper />
+      <DateComponent date={date}/>
+      <CompanyComponent company={company} />
+      <AccountComponent ledger={ledger} />
+      <AmountComponent amount={amount} />
     </div>
   );
 };
