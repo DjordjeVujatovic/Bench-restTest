@@ -90,7 +90,7 @@
   height: 4rem;
   background: white;
   font-family: "Roboto-Bold", sarif;
-  font-size: 12px;
+  font-size: 14px;
   color: #098B8C;
   border-bottom: 1px solid #dbdbdb; }
   .balanceSheetHeaderContainer .date {
@@ -117,18 +117,27 @@
   align-items: center;
   height: 3rem;
   justify-content: space-between;
-  border-bottom: 1px solid #dbdbdb; }
+  border-bottom: 1px solid #dbdbdb;
+  font-size: 14px; }
   .balanceSheetComponent .dateComponentContainer {
     flex-basis: 15%;
-    margin-left: 20px; }
+    margin-left: 20px;
+    color: #9b9b9b;
+    font-family: "Roboto-Regular", sarif; }
   .balanceSheetComponent .companyComponentContainer {
-    flex-basis: 35%; }
+    flex-basis: 35%;
+    font-family: "Roboto-Bold", sarif;
+    text-transform: capitalize; }
   .balanceSheetComponent .accountComponentContainer {
-    flex-basis: 35%; }
+    flex-basis: 35%;
+    font-family: "Roboto-Regular", sarif;
+    color: #9b9b9b;
+    font-size: 12px; }
   .balanceSheetComponent .amountComponentContainer {
     flex-basis: 15%;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    font-family: "Roboto-Bold", sarif; }
 
 html, body {
   margin: 0;
