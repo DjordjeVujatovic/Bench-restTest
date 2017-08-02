@@ -2,8 +2,10 @@ import React from 'react';
 
 const AmountComponent = ({amount}) => {
   return (
-    <div>
-      <p>{amount}</p>
+    <div className="amountComponentContainer">
+      <div className="amountDataWrapper">
+        <p>{amount}</p>
+      </div>
     </div>
   );
 };

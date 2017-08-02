@@ -13,12 +13,12 @@ class BalanceSheetContainer extends Component {
     const { isLoading } = this.props;
     const transactionData = this.props.balanceSheet;
     return (
-      <div>
+      <div className="balanceSheetContainer">
         {
           isLoading ?
             <LoadingComponent />
             :
-            <div>
+            <div className="balanceSheetWrapper">
               <BalanceSheetHeader />
               {transactionData.map((transaction, key) => (
                 <BalanceSheetComponent
