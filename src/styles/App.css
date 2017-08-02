@@ -68,7 +68,6 @@
     font-size: 18px; }
 
 .balanceSheetComponent {
-  height: 100vh;
   display: flex;
   justify-content: center; }
 
@@ -80,6 +79,7 @@
 .balanceSheetHeaderContainer {
   display: flex;
   height: 3rem;
+  margin: 2rem 2rem 0;
   background: white;
   font-family: "Roboto-Bold", sarif;
   font-size: 12px;
