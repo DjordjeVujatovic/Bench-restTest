@@ -4,7 +4,7 @@ const CompanyComponent = ({company}) => {
   return (
     <div className="companyComponentContainer">
       <div className="companyDataWrapper">
-        <p>{company.toLowerCase()}</p>
+        <p>{company}</p>
       </div>
     </div>
   );

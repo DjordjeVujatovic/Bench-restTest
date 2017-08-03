@@ -117,6 +117,7 @@
   align-items: center;
   height: 3rem;
   justify-content: space-between;
+  background: #F3F1EE;
   border-bottom: 1px solid #dbdbdb;
   font-size: 14px; }
   .balanceSheetComponent .dateComponentContainer {
@@ -127,7 +128,7 @@
   .balanceSheetComponent .companyComponentContainer {
     flex-basis: 35%;
     font-family: "Roboto-Bold", sarif;
-    text-transform: capitalize; }
+    font-size: 14px; }
   .balanceSheetComponent .accountComponentContainer {
     flex-basis: 35%;
     font-family: "Roboto-Regular", sarif;

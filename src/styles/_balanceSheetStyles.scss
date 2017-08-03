@@ -53,6 +53,7 @@
   align-items: center;
   height: 3rem;
   justify-content: space-between;
+  background: $accentIsabelline;
   border-bottom: 1px solid $accentLightGray;
   font-size: $fontSizeMedium;
   .dateComponentContainer {
@@ -64,7 +65,7 @@
   .companyComponentContainer {
     flex-basis: 35%;
     font-family: $coreFontBold;
-    text-transform: capitalize;
+    font-size: $fontSizeMedium;
   }
   .accountComponentContainer {
     flex-basis: 35%;
