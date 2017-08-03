@@ -79,11 +79,11 @@
     display: flex;
     justify-content: center;
     font-family: $coreFontBold;
-    .negativeIntegers {
-      color: $coreTomato;
+    .positiveIntegers {
+      color: $coreSpanishGray;
     }
   }
 }
 .emptyLedger {
-  color: $coreTomato;
+  color: $coreBrownYellow;
 }

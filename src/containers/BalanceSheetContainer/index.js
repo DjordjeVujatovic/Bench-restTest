@@ -20,10 +20,9 @@ class BalanceSheetContainer extends Component {
             <LoadingComponent />
             :
             <div className="balanceSheetWrapper">
-              <BalanceSheetHeader totalAmount={totalAmount}/>
+              <BalanceSheetHeader totalAmount={totalAmount} />
               {transactionData.map((transaction, key) => (
                 <BalanceSheetComponent
-                  key={key}
                   date={transaction.date}
                   ledger={transaction.ledger}
                   amount={transaction.amount}
@@ -40,13 +39,13 @@ class BalanceSheetContainer extends Component {
 const mapStateToProps = state => ({
   isLoading: state.balanceSheetData.isLoading,
   balanceSheet: state.balanceSheetData.data,
-  totalAmount: state.balanceSheetData.totalAmount
+  totalAmount: state.balanceSheetData.totalAmount,
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchTransactionData: () => {
     dispatch(fetchTransactionData());
-  }
-})
+  },
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(BalanceSheetContainer);

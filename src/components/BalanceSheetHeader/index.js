@@ -1,7 +1,7 @@
 import React from 'react';
 import { integerToDollar } from '../../HelperFunctions';
 
-const BalanceSheetHeader = ({totalAmount}) => {
+const BalanceSheetHeader = ({ totalAmount }) => {
   return (
     <div className="balanceSheetHeaderContainer">
       <div className="date">

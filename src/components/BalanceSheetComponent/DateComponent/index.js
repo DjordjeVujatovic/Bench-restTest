@@ -1,14 +1,15 @@
 import React from 'react';
 import { dateConverter } from '../../../HelperFunctions/';
 
-const DateComponent = ({date, ledger, company}) => {
+const DateComponent = ({ date }) => {
   return (
-     <div className="dateComponentContainer">
+    <div className="dateComponentContainer">
       <div className="dateDataWrapper">
         <p>{dateConverter(date)}</p>
       </div>
-     </div>
+    </div>
   );
 };
 
 export default DateComponent;
+

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CompanyComponent = ({company}) => {
+const CompanyComponent = ({ company }) => {
   return (
     <div className="companyComponentContainer">
       <div className="companyDataWrapper">

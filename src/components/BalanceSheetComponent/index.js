@@ -4,10 +4,10 @@ import CompanyComponent from './CompanyComponent';
 import AccountComponent from './AccountComponent';
 import AmountComponent from './AmountComponent';
 
-const BalanceSheetComponent = ({ date, ledger, amount, company}) => {
+const BalanceSheetComponent = ({ date, ledger, amount, company }) => {
   return (
     <div className="balanceSheetComponent">
-      <DateComponent date={date}/>
+      <DateComponent date={date} />
       <CompanyComponent company={company} />
       <AccountComponent ledger={ledger} />
       <AmountComponent amount={amount} />

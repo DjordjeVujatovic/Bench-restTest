@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AccountComponent = ({ledger}) => {
+const AccountComponent = ({ ledger }) => {
   return (
     <div className="accountComponentContainer">
       <div className="accountDataWrapper">
