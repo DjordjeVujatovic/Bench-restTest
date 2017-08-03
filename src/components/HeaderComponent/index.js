@@ -4,7 +4,7 @@ const HeaderComponent = () => {
   return (
     <div className="headerComponentContainer">
       <div className="headerWrapper">
-        <p>Bench Test</p>
+        <img className="benchLogoHeader" src="https://bench.imgix.net/resources/images/pages/media-resources/logos/logo-gold.png" />
       </div>
     </div>
   );

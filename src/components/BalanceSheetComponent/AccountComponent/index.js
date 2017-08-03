@@ -4,7 +4,13 @@ const AccountComponent = ({ledger}) => {
   return (
     <div className="accountComponentContainer">
       <div className="accountDataWrapper">
-        <p>{ledger}</p>
+        {ledger !== '' ?
+          <p>{ledger}</p>
+          :
+          <div className="emptyLedger">
+            <p>Nothing to see here!</p>
+          </div>
+        }
       </div>
     </div>
   );

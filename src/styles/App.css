@@ -66,10 +66,13 @@
     color: white;
     font-family: "Roboto-Regular", sarif;
     font-size: 18px; }
+    .headerComponentContainer .headerWrapper .benchLogoHeader {
+      height: 2.25rem; }
 
 .balanceSheetContainer {
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 2rem; }
 
 .balanceSheetWrapper {
   width: 90%;
@@ -139,6 +142,9 @@
     display: flex;
     justify-content: center;
     font-family: "Roboto-Bold", sarif; }
+
+.emptyLedger {
+  color: #D2A764; }
 
 html, body {
   margin: 0;
