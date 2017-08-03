@@ -11,7 +11,7 @@ export default (state = initialState, action) => {
     case GET_TRANSACTION_DATA:
        let currentData = state.data || [];
        let newData = action.payload.transactions.map(transaction => {
-          for(var key in transaction) {
+          for(const key in transaction) {
             transaction[key.toLowerCase()] = transaction[key];
             delete transaction[key];
           }
