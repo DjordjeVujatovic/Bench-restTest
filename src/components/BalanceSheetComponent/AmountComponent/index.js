@@ -1,10 +1,11 @@
 import React from 'react';
+import { integerToDollar } from '../../../HelperFunctions';
 
 const AmountComponent = ({amount}) => {
   return (
     <div className="amountComponentContainer">
       <div className="amountDataWrapper">
-        <p>{amount}</p>
+        <p>{integerToDollar(amount)}</p>
       </div>
     </div>
   );

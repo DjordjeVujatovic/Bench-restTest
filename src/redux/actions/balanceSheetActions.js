@@ -22,7 +22,7 @@ export const doneLoadingTransactionData = () => ({
 
 // Fetch Data from API
 
-const endpoint = 'http://resttest.bench.co/transactions/4.json';
+const endpoint = 'http://resttest.bench.co/transactions/1.json';
 
 export const fetchTransactionData = () => (dispatch) => {
   dispatch(loadingTransactionData());
