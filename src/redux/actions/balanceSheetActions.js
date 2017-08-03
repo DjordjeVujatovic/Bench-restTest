@@ -1,4 +1,5 @@
 //Actions
+
 export const LOADING_TRANSACTION_DATA = 'LOADING_TRANSACTION_DATA';
 export const DONE_LOADING_TRANSACTION_DATA = 'DONE_LOADING_TRANSACTION_DATA';
 export const GET_TRANSACTION_DATA = 'GET_TRANSACTION_DATA';
@@ -31,7 +32,6 @@ export const fetchTransactionData = () => (dispatch) => {
       return;
     }
     return response.json().then((data) => {
-      console.log({data});
       dispatch(getTransactionData(data));
       fetch(`${endpoint}${data.page+1}.json`).then(fetchPageTransactions);
     })

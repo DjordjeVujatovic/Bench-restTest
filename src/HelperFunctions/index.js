@@ -9,12 +9,20 @@ export const dateConverter = (date) => {
   return `${month} ${day}, ${year}`;
 };
 
+//Number string to dollar figure converter
+
 export const integerToDollar = (number) => {
     number = number.toString();
     let dollars = number.split('.')[0];
     const cents = (number.split('.')[1] || '') +'00';
-    dollars = dollars.split('').reverse().join('')
-        .replace(/(\d{3}(?!$)(?!-))/g, '$1,')
-        .split('').reverse().join('');
+    dollars = dollars.split('')
+                     .reverse()
+                     .join('')
+                     .replace(/(\d{3}(?!$)(?!-))/g, '$1,')
+                     .split('')
+                     .reverse()
+                     .join('');
+
     return `$${dollars}.${cents.slice(0, 2)}`;
-}
+};
+
