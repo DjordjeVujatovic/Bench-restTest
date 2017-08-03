@@ -9,18 +9,21 @@ export default (state = initialState, action) => {
     case DONE_LOADING_TRANSACTION_DATA:
       return { ...state, isLoading: false };
     case GET_TRANSACTION_DATA:
-       let currentData = state.data || []
+       let currentData = state.data || [];
        let newData = action.payload.transactions.map(transaction => {
           for(var key in transaction) {
-            transaction[ key.toLowerCase() ] = transaction[key];
+            transaction[key.toLowerCase()] = transaction[key];
             delete transaction[key];
           }
           return transaction;
         })
-
+       let totalAmount = currentData.concat(newData).reduce((sum, transaction) => {
+          return sum + parseFloat(transaction.amount, 10);
+       }, 0)
       return {
         ...state,
-        data: currentData.concat(newData)
+        data: currentData.concat(newData),
+        totalAmount: totalAmount
       }
     default:
       return state;

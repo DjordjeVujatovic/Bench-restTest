@@ -143,9 +143,11 @@
     display: flex;
     justify-content: center;
     font-family: "Roboto-Bold", sarif; }
+    .balanceSheetComponent .amountComponentContainer .negativeIntegers {
+      color: #F16549; }
 
 .emptyLedger {
-  color: #D2A764; }
+  color: #F16549; }
 
 .loadingComponentContainer {
   display: flex;

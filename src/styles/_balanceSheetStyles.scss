@@ -79,8 +79,11 @@
     display: flex;
     justify-content: center;
     font-family: $coreFontBold;
+    .negativeIntegers {
+      color: $coreTomato;
+    }
   }
 }
 .emptyLedger {
-  color: $coreBrownYellow;
+  color: $coreTomato;
 }

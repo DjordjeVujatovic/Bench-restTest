@@ -5,7 +5,16 @@ const AmountComponent = ({amount}) => {
   return (
     <div className="amountComponentContainer">
       <div className="amountDataWrapper">
-        <p>{integerToDollar(amount)}</p>
+        {
+          amount < 0 ?
+          <div className="negativeIntegers">
+            <p>{integerToDollar(amount)}</p>
+          </div>
+          :
+          <div className="positiveIntegers">
+            <p>{integerToDollar(amount)}</p>
+          </div>
+        }
       </div>
     </div>
   );

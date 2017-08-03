@@ -12,6 +12,7 @@ class BalanceSheetContainer extends Component {
   render() {
     const { isLoading } = this.props;
     const transactionData = this.props.balanceSheet;
+    const totalAmount = this.props.totalAmount;
     return (
       <div className="balanceSheetContainer">
         {
@@ -19,7 +20,7 @@ class BalanceSheetContainer extends Component {
             <LoadingComponent />
             :
             <div className="balanceSheetWrapper">
-              <BalanceSheetHeader />
+              <BalanceSheetHeader totalAmount={totalAmount}/>
               {transactionData.map((transaction, key) => (
                 <BalanceSheetComponent
                   key={key}
@@ -39,6 +40,7 @@ class BalanceSheetContainer extends Component {
 const mapStateToProps = state => ({
   isLoading: state.balanceSheetData.isLoading,
   balanceSheet: state.balanceSheetData.data,
+  totalAmount: state.balanceSheetData.totalAmount
 });
 
 const mapDispatchToProps = dispatch => ({
