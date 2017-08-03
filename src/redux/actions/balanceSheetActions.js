@@ -22,17 +22,20 @@ export const doneLoadingTransactionData = () => ({
 
 // Fetch Data from API
 
-const endpoint = 'http://resttest.bench.co/transactions/1.json';
+const endpoint = 'http://resttest.bench.co/transactions/';
 
 export const fetchTransactionData = () => (dispatch) => {
-  dispatch(loadingTransactionData());
-  fetch(endpoint)
-    .then(response => response.json())
-    .then((data) => {
-      dispatch(getTransactionData(data));
+  const fetchPageTransactions = function(response) {
+    if(response.status === 404) {
       dispatch(doneLoadingTransactionData());
+      return;
+    }
+    return response.json().then((data) => {
+      console.log({data});
+      dispatch(getTransactionData(data));
+      fetch(`${endpoint}${data.page+1}.json`).then(fetchPageTransactions);
     })
-    .catch(error => console.log('Error fetching JSON', error));
+  }
+  dispatch(loadingTransactionData());
+  fetch(`${endpoint}1.json`).then(fetchPageTransactions);
 };
-
-
