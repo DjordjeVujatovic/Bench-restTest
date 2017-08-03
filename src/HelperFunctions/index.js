@@ -26,3 +26,8 @@ export const integerToDollar = (number) => {
     return `$${dollars}.${cents.slice(0, 2)}`;
 };
 
+// Random Key Generator
+
+export const randomKey = () =>{
+  return Date.now() * Math.random()
+};

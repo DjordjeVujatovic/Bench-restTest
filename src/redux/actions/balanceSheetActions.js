@@ -34,7 +34,7 @@ export const fetchTransactionData = () => (dispatch) => {
     return response.json().then((data) => {
       dispatch(getTransactionData(data));
       fetch(`${endpoint}${data.page+1}.json`).then(fetchPageTransactions);
-    })
+    }).catch(error => console.log('Error fetching JSON', error));
   }
   dispatch(loadingTransactionData());
   fetch(`${endpoint}1.json`).then(fetchPageTransactions);

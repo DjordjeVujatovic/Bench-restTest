@@ -15,7 +15,7 @@ export default (state = initialState, action) => {
             transaction[key.toLowerCase()] = transaction[key];
             delete transaction[key];
           }
-          return transaction;
+          return {...transaction};
         })
        let totalAmount = currentData.concat(newData).reduce((sum, transaction) => {
           return sum + parseFloat(transaction.amount, 10);
@@ -24,7 +24,7 @@ export default (state = initialState, action) => {
         ...state,
         data: currentData.concat(newData),
         totalAmount: totalAmount
-      }
+      };
     default:
       return state;
   }

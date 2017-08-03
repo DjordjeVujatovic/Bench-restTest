@@ -1,18 +1,18 @@
 import React from 'react';
 import { integerToDollar } from '../../../HelperFunctions';
 
-const AmountComponent = ({ amount }) => {
+const AmountComponent = ({ amount, randomKey }) => {
   return (
     <div className="amountComponentContainer">
       <div className="amountDataWrapper">
         {
           amount < 0 ?
             <div className="negativeIntegers">
-              <p>{integerToDollar(amount)}</p>
+              <p key={randomKey}>{integerToDollar(amount)}</p>
             </div>
             :
             <div className="positiveIntegers">
-              <p>{integerToDollar(amount)}</p>
+              <p key={randomKey}>{integerToDollar(amount)}</p>
             </div>
         }
       </div>

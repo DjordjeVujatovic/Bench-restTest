@@ -4,6 +4,7 @@ import { fetchTransactionData } from '../../redux/actions/balanceSheetActions';
 import LoadingComponent from '../../components/LoadingComponent';
 import BalanceSheetComponent from '../../components/BalanceSheetComponent';
 import BalanceSheetHeader from '../../components/BalanceSheetHeader';
+import { randomKey } from '../../HelperFunctions';
 
 class BalanceSheetContainer extends Component {
   componentDidMount() {
@@ -21,8 +22,9 @@ class BalanceSheetContainer extends Component {
             :
             <div className="balanceSheetWrapper">
               <BalanceSheetHeader totalAmount={totalAmount} />
-              {transactionData.map((transaction, key) => (
+              {transactionData.map((transaction) => (
                 <BalanceSheetComponent
+                  randomKey={randomKey}
                   date={transaction.date}
                   ledger={transaction.ledger}
                   amount={transaction.amount}

@@ -1,11 +1,11 @@
 import React from 'react';
 import { dateConverter } from '../../../HelperFunctions/';
 
-const DateComponent = ({ date }) => {
+const DateComponent = ({ date, randomKey }) => {
   return (
     <div className="dateComponentContainer">
       <div className="dateDataWrapper">
-        <p>{dateConverter(date)}</p>
+        <p key={randomKey}>{dateConverter(date)}</p>
       </div>
     </div>
   );
