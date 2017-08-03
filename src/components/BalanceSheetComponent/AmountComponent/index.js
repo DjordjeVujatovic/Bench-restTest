@@ -8,11 +8,11 @@ const AmountComponent = ({ amount, randomKey }) => {
         {
           amount < 0 ?
             <div className="negativeIntegers">
-              <p key={randomKey}>{integerToDollar(amount)}</p>
+              <p key={randomKey()}>{integerToDollar(amount)}</p>
             </div>
             :
             <div className="positiveIntegers">
-              <p key={randomKey}>{integerToDollar(amount)}</p>
+              <p key={randomKey()}>{integerToDollar(amount)}</p>
             </div>
         }
       </div>

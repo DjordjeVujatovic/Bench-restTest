@@ -6,7 +6,7 @@ import AmountComponent from './AmountComponent';
 
 const BalanceSheetComponent = ({ date, ledger, amount, company, randomKey }) => {
   return (
-    <div key={randomKey} className="balanceSheetComponent">
+    <div className="balanceSheetComponent">
       <DateComponent date={date} randomKey={randomKey} />
       <CompanyComponent company={company} randomKey={randomKey} />
       <AccountComponent ledger={ledger} randomKey={randomKey} />

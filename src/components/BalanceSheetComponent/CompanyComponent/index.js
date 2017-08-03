@@ -4,7 +4,7 @@ const CompanyComponent = ({ company, randomKey }) => {
   return (
     <div className="companyComponentContainer">
       <div className="companyDataWrapper">
-        <p key={randomKey}>{company}</p>
+        <p key={randomKey()}>{company}</p>
       </div>
     </div>
   );

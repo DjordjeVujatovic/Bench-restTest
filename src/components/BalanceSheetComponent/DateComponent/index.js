@@ -5,7 +5,7 @@ const DateComponent = ({ date, randomKey }) => {
   return (
     <div className="dateComponentContainer">
       <div className="dateDataWrapper">
-        <p key={randomKey}>{dateConverter(date)}</p>
+        <p key={randomKey()}>{dateConverter(date)}</p>
       </div>
     </div>
   );
