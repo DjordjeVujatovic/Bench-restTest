@@ -3,6 +3,7 @@
 <img align="center" src="./bench-restTest-1.png" alt="Image of Personal-Site" width="100%" height="550">
 <img align="center" src="./bench-restTest-2.png" alt="Image of Personal-Site" width="100%" height="550">
 
+## Summary
 The Bench-restTest is an exercise to help demonstrate the ability to reason about JSON REST API's and data transformations. This web app is connected
 to an API and presents the data on a balance-sheet-like user interface, and adds up the total balance using the amount values inside of the data object.
 
