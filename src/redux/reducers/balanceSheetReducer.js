@@ -30,13 +30,13 @@ export default (state = initialState, action) => {
        and adds them up to a grand total.
       */
 
-      const totalAmount = currentData.concat(newData).reduce((sum, transaction) => {
+      const totalBalance = currentData.concat(newData).reduce((sum, transaction) => {
         return sum + parseFloat(transaction.amount, 10);
       }, 0);
       return {
         ...state,
         data: currentData.concat(newData),
-        totalAmount,
+        totalBalance,
       };
     default:
       return state;

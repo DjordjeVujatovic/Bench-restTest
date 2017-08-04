@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { integerToDollar } from '../../HelperFunctions';
 
-const BalanceSheetHeader = ({ totalAmount, randomKey }) => {
+const BalanceSheetHeader = ({ totalBalance, randomKey }) => {
   return (
     <div className="balanceSheetHeaderContainer">
       <div className="date">
@@ -22,10 +22,10 @@ const BalanceSheetHeader = ({ totalAmount, randomKey }) => {
       </div>
       <div className="total">
         <div>
-          {totalAmount > 0 ?
-            <p key={randomKey()}>{integerToDollar(totalAmount)}</p>
+          {totalBalance > 0 ?
+            <p key={randomKey()}>{integerToDollar(totalBalance)}</p>
             :
-            <p key={randomKey()} className="amountTotalNegative">{integerToDollar(totalAmount)}</p>
+            <p key={randomKey()} className="amountTotalNegative">{integerToDollar(totalBalance)}</p>
           }
         </div>
       </div>
