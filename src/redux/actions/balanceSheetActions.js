@@ -27,11 +27,12 @@ const endpoint = 'http://resttest.bench.co/transactions/';
 
 export const fetchTransactionData = () => (dispatch) => {
   const fetchPageTransactions = function(response) {
-    if(response.status === 404 || response.transactions.length === 0) {
+    if(response.status === 404) {
       dispatch(doneLoadingTransactionData());
       return;
     }
     return response.json().then((data) => {
+      if(data.transactions.length === 0) return;
       dispatch(getTransactionData(data));
       fetch(`${endpoint}${data.page+1}.json`).then(fetchPageTransactions);
     }).catch(error => console.log('Error fetching JSON', error));

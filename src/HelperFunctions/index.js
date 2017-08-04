@@ -1,4 +1,10 @@
-//Day Suffix Generator
+/*
+Day Suffix Generator Function:
+
+  This function takes a day (integer) of the month in as an argument
+  and adds a suffix at the end (st, nd, rd, th) depending on the integer;
+
+*/
 
 export function daySuffix(day) {
   const singleDigits = day % 10;
@@ -15,7 +21,12 @@ export function daySuffix(day) {
   return `${day}th`;
 };
 
-//Date Converter
+/*
+Date Converter Function:
+
+  This function takes in a date string (2013-12-19) and converts it to the format of ex: Dec 19th, 2013;
+
+*/
 
 export const dateConverter = (date) => {
   const locale = "en-us"
@@ -26,7 +37,12 @@ export const dateConverter = (date) => {
   return `${month} ${daySuffix(day)}, ${year}`;
 };
 
-//Number string to dollar figure converter
+/*
+Integer to Dollar Figure Function:
+
+  This function takes in an number as an argument ex: 12000.1 and returns a dollar figure to two decimal places ex: $12,000.10;
+
+*/
 
 export const integerToDollar = (number) => {
   number = number.toString();
@@ -43,8 +59,13 @@ export const integerToDollar = (number) => {
   return `$${dollars}.${cents.slice(0, 2)}`;
 };
 
-// Random Key Generator
+/*
+Random Key Generator Function:
+
+  This function generates a random key to use for keys when mapping over an array;
+
+*/
 
 export const randomKey = () => {
-  return Date.now() * Math.random()
+  return Date.now() * Math.random();
 };
