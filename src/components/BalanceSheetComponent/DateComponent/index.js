@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { dateConverter } from '../../../HelperFunctions/';
 
 const DateComponent = ({ date, randomKey }) => {
@@ -9,6 +10,11 @@ const DateComponent = ({ date, randomKey }) => {
       </div>
     </div>
   );
+};
+
+DateComponent.propTypes = {
+  date: PropTypes.string.isRequired,
+  randomKey: PropTypes.func.isRequired,
 };
 
 export default DateComponent;

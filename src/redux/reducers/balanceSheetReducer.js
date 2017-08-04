@@ -9,34 +9,34 @@ export default (state = initialState, action) => {
     case DONE_LOADING_TRANSACTION_DATA:
       return { ...state, isLoading: false };
     case GET_TRANSACTION_DATA:
-       let currentData = state.data || [];
+      const currentData = state.data || [];
 
-       /*
-        The keys inside of the data that is being received from the JSON REST API are not lower-cased.
-        This function maps over the transactions inside of the JSON data, and converts the keys
-        to lower case.
-       */
+      /*
+       The keys inside of the data that is being received from the JSON REST API are not lower-cased.
+       This function maps over the transactions inside of the JSON data, and converts the keys
+       to lower case.
+      */
 
-       let newData = action.payload.transactions.map(transaction => {
-          for(const key in transaction) {
-            transaction[key.toLowerCase()] = transaction[key];
-            delete transaction[key];
-          }
-          return {...transaction};
-        })
+      const newData = action.payload.transactions.map((transaction) => {
+        for (const key in transaction) {
+          transaction[key.toLowerCase()] = transaction[key];
+          delete transaction[key];
+        }
+        return { ...transaction };
+      });
 
-       /*
-        This reduce function loops over all of the amount data inside of transactions
-        and adds them up to a grand total.
-       */
+      /*
+       This reduce function loops over all of the amount data inside of transactions
+       and adds them up to a grand total.
+      */
 
-       let totalAmount = currentData.concat(newData).reduce((sum, transaction) => {
-          return sum + parseFloat(transaction.amount, 10);
-       }, 0)
+      const totalAmount = currentData.concat(newData).reduce((sum, transaction) => {
+        return sum + parseFloat(transaction.amount, 10);
+      }, 0);
       return {
         ...state,
         data: currentData.concat(newData),
-        totalAmount: totalAmount
+        totalAmount,
       };
     default:
       return state;

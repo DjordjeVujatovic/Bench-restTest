@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const CompanyComponent = ({ company, randomKey }) => {
   return (
@@ -8,6 +9,11 @@ const CompanyComponent = ({ company, randomKey }) => {
       </div>
     </div>
   );
+};
+
+CompanyComponent.propTypes = {
+  company: PropTypes.string.isRequired,
+  randomKey: PropTypes.func.isRequired,
 };
 
 export default CompanyComponent;

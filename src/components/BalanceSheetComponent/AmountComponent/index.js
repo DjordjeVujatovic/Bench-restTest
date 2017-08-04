@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { integerToDollar } from '../../../HelperFunctions';
 
 const AmountComponent = ({ amount, randomKey }) => {
@@ -18,6 +19,11 @@ const AmountComponent = ({ amount, randomKey }) => {
       </div>
     </div>
   );
+};
+
+AmountComponent.propTypes = {
+  amount: PropTypes.string.isRequired,
+  randomKey: PropTypes.func.isRequired,
 };
 
 export default AmountComponent;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import { fetchTransactionData } from '../../redux/actions/balanceSheetActions';
 import LoadingComponent from '../../components/LoadingComponent';
 import BalanceSheetComponent from '../../components/BalanceSheetComponent';
@@ -21,8 +22,8 @@ class BalanceSheetContainer extends Component {
             <LoadingComponent />
             :
             <div className="balanceSheetWrapper">
-              <BalanceSheetHeader totalAmount={totalAmount} />
-              {transactionData.map((transaction) => (
+              <BalanceSheetHeader randomKey={randomKey} totalAmount={totalAmount} />
+              {transactionData.map(transaction => (
                 <BalanceSheetComponent
                   randomKey={randomKey}
                   date={transaction.date}
@@ -49,5 +50,10 @@ const mapDispatchToProps = dispatch => ({
     dispatch(fetchTransactionData());
   },
 });
+
+BalanceSheetContainer.propTypes = {
+  fetchTransactionData: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(BalanceSheetContainer);

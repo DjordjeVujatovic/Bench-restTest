@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const AccountComponent = ({ ledger, randomKey }) => {
   return (
@@ -14,6 +15,11 @@ const AccountComponent = ({ ledger, randomKey }) => {
       </div>
     </div>
   );
+};
+
+AccountComponent.propTypes = {
+  ledger: PropTypes.string.isRequired,
+  randomKey: PropTypes.func.isRequired,
 };
 
 export default AccountComponent;
