@@ -134,7 +134,13 @@
   .balanceSheetComponent .companyComponentContainer {
     flex-basis: 35%;
     font-family: "Roboto-Bold", sarif;
-    font-size: 14px; }
+    font-size: 14px;
+    text-transform: capitalize; }
+    .balanceSheetComponent .companyComponentContainer p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 30ch; }
   .balanceSheetComponent .accountComponentContainer {
     flex-basis: 35%;
     font-family: "Roboto-Regular", sarif;

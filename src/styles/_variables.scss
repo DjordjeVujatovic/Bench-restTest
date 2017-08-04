@@ -20,3 +20,12 @@ $fontSizeLarge: 24px;
 $coreFontLight: 'Roboto-Light', sarif;
 $coreFontRegular: 'Roboto-Regular', sarif;
 $coreFontBold: 'Roboto-Bold', sarif;
+
+//Mixins
+
+@mixin textCharacterLimiter {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 30ch;
+}

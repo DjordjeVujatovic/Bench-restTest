@@ -70,6 +70,10 @@
     flex-basis: 35%;
     font-family: $coreFontBold;
     font-size: $fontSizeMedium;
+    text-transform: capitalize;
+    p {
+      @include textCharacterLimiter
+    }
   }
   .accountComponentContainer {
     flex-basis: 35%;

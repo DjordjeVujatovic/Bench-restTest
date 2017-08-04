@@ -27,7 +27,7 @@ const endpoint = 'http://resttest.bench.co/transactions/';
 
 export const fetchTransactionData = () => (dispatch) => {
   const fetchPageTransactions = function(response) {
-    if(response.status === 404) {
+    if(response.status === 404 || response.transactions.length === 0) {
       dispatch(doneLoadingTransactionData());
       return;
     }
