@@ -21,7 +21,14 @@ export const doneLoadingTransactionData = () => ({
   payload: null,
 });
 
-// Fetch Data from API
+/*
+
+Fetch Data from API:
+
+  This is a recursive API fetch call to the specified endpoint. The function calls itself until it reaches
+  a 404 response status, at which point it stops calling itself.
+
+*/
 
 const endpoint = 'http://resttest.bench.co/transactions/';
 
