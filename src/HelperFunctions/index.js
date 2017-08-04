@@ -1,3 +1,20 @@
+//Day Suffix Generator
+
+export function daySuffix(day) {
+    const singleDigits = day % 10;
+    const doubleDigits = day % 100;
+    if (singleDigits === 1 && doubleDigits !== 11) {
+        return `${day}st`;
+    }
+    if (singleDigits === 2 && doubleDigits !== 12) {
+        return `${day}nd`;
+    }
+    if (singleDigits === 3 && doubleDigits !== 13) {
+        return `${day}rd`;
+    }
+    return `${day}th`;
+}
+
 //Date Converter
 
 export const dateConverter = (date) => {
@@ -6,7 +23,7 @@ export const dateConverter = (date) => {
   const day = new Date(date).toLocaleString(locale, {day:"numeric"});
   const year = new Date(date).toLocaleString(locale, {year:"numeric"});
 
-  return `${month} ${day}, ${year}`;
+  return `${month} ${daySuffix(day)}, ${year}`;
 };
 
 //Number string to dollar figure converter
