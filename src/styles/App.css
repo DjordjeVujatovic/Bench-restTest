@@ -115,6 +115,8 @@
     align-items: center;
     justify-content: center;
     flex-basis: 15%; }
+    .balanceSheetHeaderContainer .total .amountTotalNegative {
+      color: black; }
 
 .balanceSheetComponent {
   display: flex;

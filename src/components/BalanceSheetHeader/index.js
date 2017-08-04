@@ -21,7 +21,11 @@ const BalanceSheetHeader = ({ totalAmount }) => {
       </div>
       <div className="total">
         <div>
-          <p>{integerToDollar(totalAmount)}</p>
+          {totalAmount > 0 ?
+            <p>{integerToDollar(totalAmount)}</p>
+            :
+            <p className="amountTotalNegative">{integerToDollar(totalAmount)}</p>
+          }
         </div>
       </div>
     </div>

@@ -47,6 +47,9 @@
     align-items: center;
     justify-content: center;
     flex-basis: 15%;
+    .amountTotalNegative {
+      color: black;
+    }
   }
 }
 .balanceSheetComponent {
