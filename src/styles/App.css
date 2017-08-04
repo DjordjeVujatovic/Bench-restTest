@@ -73,7 +73,7 @@
 .balanceSheetContainer {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem; }
+  margin-bottom: 3rem; }
 
 .balanceSheetWrapper {
   width: 90%;
@@ -147,7 +147,7 @@
       color: #098B8C; }
 
 .emptyLedger {
-  color: #D2A764; }
+  color: #F16549; }
 
 .loadingComponentContainer {
   display: flex;
@@ -213,6 +213,59 @@
   height: 200px !important;
   -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
   transform: translate(-100px, -100px) scale(1) translate(100px, 100px); }
+
+.footerContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem; }
+  .footerContainer .footerWrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    height: 10vh;
+    align-items: center; }
+    .footerContainer .footerWrapper .footerLeft {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 50%;
+      height: 75%;
+      justify-content: space-between;
+      color: #555555;
+      font-family: "Roboto-Regular", sarif; }
+      .footerContainer .footerWrapper .footerLeft .footerLeftTop {
+        display: flex;
+        align-items: center;
+        width: 85%;
+        justify-content: space-between;
+        font-size: 14px; }
+        .footerContainer .footerWrapper .footerLeft .footerLeftTop *:hover {
+          text-decoration: underline;
+          cursor: pointer; }
+        .footerContainer .footerWrapper .footerLeft .footerLeftTop .benchImage img {
+          height: 1.75em; }
+      .footerContainer .footerWrapper .footerLeft .footerLeftBottom {
+        font-size: 12px; }
+    .footerContainer .footerWrapper .footerRight {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 75%;
+      justify-content: space-between; }
+      .footerContainer .footerWrapper .footerRight .footerRightTop {
+        display: flex;
+        justify-content: space-between;
+        width: 45%;
+        align-self: flex-end; }
+        .footerContainer .footerWrapper .footerRight .footerRightTop svg {
+          font-size: 2rem;
+          color: #555555; }
+          .footerContainer .footerWrapper .footerRight .footerRightTop svg:hover {
+            cursor: pointer;
+            color: #9b9b9b; }
+      .footerContainer .footerWrapper .footerRight .footerRightBottom {
+        font-size: 12px;
+        color: #9b9b9b;
+        font-family: "Roboto-Regular", sarif; }
 
 html, body {
   margin: 0;

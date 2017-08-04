@@ -8,7 +8,7 @@ const AccountComponent = ({ ledger, randomKey }) => {
           <p key={randomKey()}>{ledger}</p>
           :
           <div className="emptyLedger">
-            <p>Nothing to see here!</p>
+            <p>Please fill in account information. Thank you.</p>
           </div>
         }
       </div>

@@ -1,7 +1,7 @@
 .balanceSheetContainer {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 .balanceSheetWrapper {
   width: 90%;
@@ -85,5 +85,5 @@
   }
 }
 .emptyLedger {
-  color: $coreBrownYellow;
+  color: $coreTomato;
 }
