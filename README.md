@@ -9,6 +9,9 @@ to an API and presents the data on a balance-sheet-like user interface, and adds
 This was a very fun project to work on. The challenge allowed to me demonstrate my understanding of JSON REST API's and data transformations.
 An initial hurdle that I ran into was that the object keys inside of the API were capitalized, one of them being Date which is a reserved JavaScript identifer.
 To fix this, I looped over the JSON and set the keys to lower case.
+In the case of the this project there are four endpoints. They act as four different pages of the imaginary transaction history.
+The fetch call inside of this project is recursive and makes consecutive calls to these endpoints, pages one through four, until it receives a 404 error at which point it terminates.
+It then combines all of the data objects and presents them together on the balance-sheet-like UI.
 
 ## Technologies Used
 - Javascript (ES6)
